@@ -49,7 +49,7 @@ const gamesData = [
   },
   {
     id: "hoops",
-    title: "Basket Ball",
+    title: "Basketball",
     desc: "Shoot for the stars and score big.",
     image: "/images/Basketball.jpeg",
     glowColor: "#ff5500",

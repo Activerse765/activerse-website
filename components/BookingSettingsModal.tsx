@@ -205,7 +205,7 @@ export default function BookingSettingsModal({ isOpen, onClose, onSaved }: Booki
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '0.5rem', flexWrap: 'wrap', gap: '0.5rem' }}>
         <label style={{ color: '#fff', fontWeight: 600 }}>{title}</label>
         <div style={{ display: 'flex', gap: '0.5rem' }}>
-          <button type="button" onClick={() => setSlots(getDefaultTimeSlots60Min())} style={{ padding: '0.35rem 0.75rem', background: 'rgba(255,255,255,0.1)', color: '#fff', border: '1px solid rgba(255,255,255,0.3)', borderRadius: '6px', cursor: 'pointer', fontSize: '0.85rem' }}>Reset 11 AM–11 PM</button>
+          <button type="button" onClick={() => setSlots(getDefaultTimeSlots60Min())} style={{ padding: '0.35rem 0.75rem', background: 'rgba(255,255,255,0.1)', color: '#fff', border: '1px solid rgba(255,255,255,0.3)', borderRadius: '6px', cursor: 'pointer', fontSize: '0.85rem' }}>Reset 12 PM–10 PM</button>
           <button type="button" onClick={() => setSlots((prev) => [...prev, { value: '11:00', label: '11 AM-12 PM', enabled: true }])} style={{ padding: '0.35rem 0.75rem', background: 'rgba(76, 175, 80, 0.3)', color: '#4CAF50', border: '1px solid #4CAF50', borderRadius: '6px', cursor: 'pointer', fontSize: '0.85rem' }}>Add slot</button>
         </div>
       </div>

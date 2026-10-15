@@ -60,7 +60,6 @@ export default function Navbar() {
         <Link href="/#hero" className={styles.navItem} onClick={(e) => handleNavClick(e, '/#hero')}>Home</Link>
         <Link href="/#games" className={styles.navItem} onClick={(e) => handleNavClick(e, '/#games')}>Our Games</Link>
         <Link href="/#reviews" className={styles.navItem} onClick={(e) => handleNavClick(e, '/#reviews')}>Reviews</Link>
-        <Link href="/scores-and-rewards" className={styles.navItem} onClick={closeMenu}>Scores & Rewards</Link>
         <Link href="/#booking" className={`${styles.navItem} ${styles.bookingBtn}`} onClick={(e) => handleNavClick(e, '/#booking')}>Booking</Link>
       </div>
     </nav>

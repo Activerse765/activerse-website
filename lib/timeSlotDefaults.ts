@@ -1,8 +1,11 @@
 /**
- * Default time slots 11:00 AM to 11:00 PM (23:00)
- * 30-min: 11:00, 11:30, 12:00, ... 22:30, 23:00
- * 60-min: 11:00, 12:00, ... 23:00
+ * Default time slots for opening hours 12:00 PM to 10:00 PM.
+ * 30-min: 12:00, 12:30, ... 21:30 (last slot ends at 10 PM)
+ * 60-min: 12:00, 13:00, ... 21:00 (last slot ends at 10 PM)
  */
+
+const OPEN_HOUR = 12;  // 12 PM
+const CLOSE_HOUR = 22; // 10 PM
 
 export interface TimeSlotOption {
   value: string;
@@ -20,19 +23,17 @@ function timeToDisplay(h: number, m: number): string {
 /** 30-min slot: label as "11 AM to 11:30 AM", "11:30 AM to 12 PM", etc. */
 export function getDefaultTimeSlots30Min(): TimeSlotOption[] {
   const slots: TimeSlotOption[] = [];
-  for (let h = 11; h <= 23; h++) {
+  for (let h = OPEN_HOUR; h < CLOSE_HOUR; h++) {
     slots.push({
       value: `${h.toString().padStart(2, '0')}:00`,
-      label: h < 23 ? `${timeToDisplay(h, 0)} to ${timeToDisplay(h, 30)}` : `${timeToDisplay(23, 0)} to 12 AM`,
+      label: `${timeToDisplay(h, 0)} to ${timeToDisplay(h, 30)}`,
       enabled: true,
     });
-    if (h < 23) {
-      slots.push({
-        value: `${h.toString().padStart(2, '0')}:30`,
-        label: `${timeToDisplay(h, 30)} to ${timeToDisplay(h + 1, 0)}`,
-        enabled: true,
-      });
-    }
+    slots.push({
+      value: `${h.toString().padStart(2, '0')}:30`,
+      label: `${timeToDisplay(h, 30)} to ${timeToDisplay(h + 1, 0)}`,
+      enabled: true,
+    });
   }
   return slots;
 }
@@ -40,9 +41,9 @@ export function getDefaultTimeSlots30Min(): TimeSlotOption[] {
 /** 60-min slot: label as "11 AM to 12 PM", "12 PM to 1 PM", etc. */
 export function getDefaultTimeSlots60Min(): TimeSlotOption[] {
   const slots: TimeSlotOption[] = [];
-  for (let h = 11; h <= 23; h++) {
+  for (let h = OPEN_HOUR; h < CLOSE_HOUR; h++) {
     const endH = h + 1;
-    const endDisplay = endH <= 23 ? timeToDisplay(endH, 0) : '12 AM';
+    const endDisplay = timeToDisplay(endH, 0);
     slots.push({
       value: `${h.toString().padStart(2, '0')}:00`,
       label: `${timeToDisplay(h, 0)} to ${endDisplay}`,

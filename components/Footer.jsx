@@ -16,21 +16,7 @@ function InstagramIcon() {
   );
 }
 
-function TwitterIcon() {
-  return (
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-      <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
-    </svg>
-  );
-}
 
-function YoutubeIcon() {
-  return (
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-      <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
-    </svg>
-  );
-}
 
 export default function Footer() {
   const [email, setEmail] = useState('');
@@ -98,24 +84,6 @@ export default function Footer() {
             >
               <InstagramIcon />
             </a>
-            <a
-              href="https://twitter.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className={styles.socialBtn}
-              aria-label="X / Twitter"
-            >
-              <TwitterIcon />
-            </a>
-            <a
-              href="https://youtube.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className={styles.socialBtn}
-              aria-label="YouTube"
-            >
-              <YoutubeIcon />
-            </a>
           </div>
         </div>
 
@@ -125,7 +93,6 @@ export default function Footer() {
           <a href="/#hero" className={styles.navLink}>Home</a>
           <a href="/#games" className={styles.navLink}>Our Games</a>
           <a href="/#reviews" className={styles.navLink}>Reviews</a>
-          <Link href="/scores-and-rewards" className={styles.navLink}>Scores &amp; Rewards</Link>
           <a href="/#booking" className={`${styles.navLink} ${styles.bookNowRed}`}>Book Now</a>
         </div>
 
@@ -138,7 +105,7 @@ export default function Footer() {
           </div>
           <div className={styles.contactRow}>
             <Clock size={16} />
-            <span>Mon-Sun : 11:00am - 10:00pm</span>
+            <span>Mon–Sun: 12:00 PM – 10:00 PM</span>
           </div>
           <div className={styles.contactRow}>
             <Phone size={16} />

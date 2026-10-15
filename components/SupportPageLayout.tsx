@@ -5,6 +5,7 @@ import Link from 'next/link';
 import Navigation from './Navigation';
 import NewsletterForm from './NewsletterForm';
 import BookingModal from './BookingModal';
+import WhatsAppButton from '@/components/WhatsAppButton';
 
 interface SupportPageLayoutProps {
   children: React.ReactNode;
@@ -41,7 +42,7 @@ export default function SupportPageLayout({ children, title }: SupportPageLayout
             <div className="footer-section">
               <h4>Quick Links</h4>
               <ul>
-                <li><Link href="/#home" scroll={false}>Home</Link></li>
+                <li><Link href="/#hero" scroll={false}>Home</Link></li>
                 <li><Link href="/#about" scroll={false}>About</Link></li>
                 <li><Link href="/#games" scroll={false}>Games</Link></li>
               </ul>
@@ -67,15 +68,7 @@ export default function SupportPageLayout({ children, title }: SupportPageLayout
           </div>
         </div>
       </footer>
-
-      {/* Admin Login Button */}
-      <Link
-        href="/login"
-        className="admin-link fixed bottom-5 right-5 bg-[#ec4899] text-white p-4 rounded-full no-underline z-[999] shadow-[0_5px_20px_rgba(236,72,153,0.4)] hover:scale-110 transition-transform"
-        title="Admin Login"
-      >
-        🔐
-      </Link>
+      <WhatsAppButton />
 
       <BookingModal isOpen={isBookingModalOpen} onClose={() => setIsBookingModalOpen(false)} />
     </>
