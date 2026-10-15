@@ -105,7 +105,7 @@ export default function Footer() {
           </div>
           <div className={styles.contactRow}>
             <Clock size={16} />
-            <span>Mon-Sun : 11:00am - 10:00pm</span>
+            <span>Mon–Sun: 12:00 PM – 10:00 PM</span>
           </div>
           <div className={styles.contactRow}>
             <Phone size={16} />
