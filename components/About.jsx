@@ -79,7 +79,7 @@ export default function About() {
   };
 
   return (
-    <section ref={sectionRef} className={styles.aboutSection}>
+    <section id="about" ref={sectionRef} className={styles.aboutSection}>
       <div className={styles.textContainer}>
         <h2 className={styles.headline}>
           {headlineWords.map((word, i) => (

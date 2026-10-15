@@ -113,7 +113,7 @@ export default function FAQPage() {
             <div className="bg-white/5 p-4 rounded-lg border border-white/10">
               <h3 className="text-xl font-semibold mb-2 text-white">What games and experiences are available?</h3>
               <p>
-                We offer a variety of immersive gaming experiences including Air Shoot, Basket Ball, 
+                We offer a variety of immersive gaming experiences including Air Shoot, Basketball, 
                 Battle Arena, Laser Escape, Mega Grid, and Power Climb. All games are included in 
                 your booking.
               </p>

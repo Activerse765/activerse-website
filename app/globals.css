@@ -586,3 +586,9 @@
 ::-webkit-scrollbar-thumb:hover {
   background: #f9004d;
 }
+
+/* Stop the off-canvas mobile menu and marquee strips from letting the page scroll sideways on phones */
+html,
+body {
+  overflow-x: clip;
+}

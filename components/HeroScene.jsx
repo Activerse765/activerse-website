@@ -90,7 +90,7 @@ function HeroContent({ gameState, score, onScore, onScrollBooking, onScrollGames
           </h1>
         ) : gameState === 'finished' && score > 6 ? (
           <h1 className={styles.title} style={{ color: '#00f0ff', textShadow: '0 0 20px rgba(0,240,255,0.5)' }}>
-            PROMO UNLOCKED
+            GRID CLEARED
           </h1>
         ) : gameState === 'finished' ? (
           <h1 className={styles.title}>GAME OVER</h1>
@@ -102,21 +102,21 @@ function HeroContent({ gameState, score, onScore, onScrollBooking, onScrollGames
           {gameState === 'playing'
             ? "Hit the red grids before they disappear! Test your reflexes."
             : gameState === 'finished' && score > 6
-            ? `Incredible! You scored ${score}. You're ready for the ultimate challenge.`
+            ? `Incredible! You scored ${score}. Now try the real Mega Grid.`
             : gameState === 'finished'
-            ? `You scored ${score}. You need more than 6 to unlock the promo. Try again!`
+            ? `You scored ${score}. Score 7 or more to clear the grid. Try again!`
             : "Six games. One wristband. Zero chairs. The future of physical gaming."}
         </p>
 
         <div className={styles.buttonGroup}>
           {gameState === 'finished' && score > 6 ? (
-            <button className={styles.heroBtn} onClick={onScrollGames}
+            <button className={styles.heroBtn} onClick={onScrollBooking}
               style={{ background: 'rgba(0,240,255,0.1)', borderColor: '#00f0ff', color: '#fff' }}>
-              VIEW MEGAGRID
+              PLAY IT FOR REAL
             </button>
           ) : (
             <button className={styles.heroBtn} onClick={onScrollBooking}>
-              INITIATE PROTOCOL
+              BOOK A SLOT
             </button>
           )}
 

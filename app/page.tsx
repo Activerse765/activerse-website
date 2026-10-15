@@ -1,7 +1,6 @@
 'use client';
 
 import { useEffect } from 'react';
-import Link from 'next/link';
 import { Michroma, Inter } from 'next/font/google';
 import Navbar from '@/components/Navbar';
 import HeroScene from '@/components/HeroScene';
@@ -13,6 +12,7 @@ import Booking from '@/components/Booking';
 import Footer from '@/components/Footer';
 import CustomCursor from '@/components/CustomCursor';
 import styles from './page.module.css';
+import WhatsAppButton from '@/components/WhatsAppButton';
 
 const michroma = Michroma({
   variable: '--font-michroma',
@@ -65,15 +65,7 @@ export default function Home() {
       <MarqueeStrip />
       <Booking />
       <Footer />
-
-      {/* Admin Login Button (matches live site, recolored to the new palette) */}
-      <Link
-        href="/login"
-        className="fixed bottom-5 right-5 bg-[#f9004d] text-white p-4 rounded-full no-underline z-[999] shadow-[0_5px_20px_rgba(249,0,77,0.4)] hover:scale-110 hover:shadow-[0_8px_30px_rgba(249,0,77,0.6)] transition-all duration-300"
-        title="Admin Login"
-      >
-        🔐
-      </Link>
+      <WhatsAppButton />
     </main>
   );
 }
